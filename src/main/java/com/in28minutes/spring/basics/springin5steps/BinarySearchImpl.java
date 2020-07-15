@@ -1,24 +1,24 @@
 package com.in28minutes.spring.basics.springin5steps;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
+@Scope(ConfigurableBeanFactory.SCOPE_SINGLETON)
 public class BinarySearchImpl {
 
 	@Autowired
+	@Qualifier("bubble")
 	private SortAlgorithm sortAlgorithm;
-
-	public BinarySearchImpl(SortAlgorithm sortAlgorithm) {
-		super();
-		this.sortAlgorithm = sortAlgorithm;
-	}
 
 	public int binarySearch(int[] numbers, int numberToSearchFor) {
 
-		sortAlgorithm.sort(numbers);
+		int[] sortedNumbers = sortAlgorithm.sort(numbers);
 		System.out.println(sortAlgorithm);
-		// search the array
+		// Search the array
 		return 3;
 	}
 

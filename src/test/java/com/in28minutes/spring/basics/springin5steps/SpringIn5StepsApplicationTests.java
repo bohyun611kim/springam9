@@ -1,14 +1,16 @@
 package com.in28minutes.spring.basics.springin5steps;
 
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
-import org.junit.jupiter.api.Test;
-
-class SpringIn5StepsApplicationTests {
+@RunWith(SpringRunner.class)
+@SpringBootTest
+public class SpringIn5StepsApplicationTests {
 
 	@Test
-	void test() {
-		fail("Not yet implemented");
+	public void contextLoads() {
 	}
 
 }
